@@ -1,0 +1,108 @@
+/* Importing custom font */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+/* Default margins, padding, and fonts for all elements */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Press Start 2P', cursive;
+}
+
+/* Game background styling */
+.background {
+	height: 100vh;
+	width: 100vw;
+	background: url('assets/hogwarts.png') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+/* Wizard character styling */
+.wizard {
+	height: 100px;
+	width: 130px;
+	position: fixed;
+	top: 40vh;
+	left: 30vw;
+	z-index: 100;
+}
+
+/* Obstacle elements styling */
+.pipe_sprite {
+	position: fixed;
+	top: 40vh;
+	left: 100vw;
+	height: 70vh;
+	width: 6vw;
+	background: url('assets/pole.png') repeat center center;
+	border: 3px solid black;
+}
+
+/* Style for message box shown during game events */
+.message {
+	position: absolute;
+	z-index: 10;
+	color: black;
+	top: 30%;
+	left: 50%;
+	font-size: 4em;
+	transform: translate(-50%, -50%);
+	text-align: center;
+}
+
+/* Additonal style for message box */
+.messageStyle{
+	background: white;
+	padding: 30px;
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+	border-radius: 5%;
+}
+
+/* Arrow styling */
+.arrow {
+	color: red;
+}
+
+/* Game score display style */
+.score {
+	position: fixed;
+	z-index: 10;
+	height: 10vh;
+	font-size: 10vh;
+	font-weight: 100;
+	color: white;
+	-webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
+	top: 0;
+	left: 0;
+	margin: 10px;
+	font-family: 'Press Start 2P', cursive;
+}
+
+/* Game score value */
+.score_val {
+	color: gold;
+	font-weight: bold;
+}
+
+/* Responsive design: Adjusts styles for screens narrower than 1080px */
+@media only screen and (max-width: 1080px) {
+    .message {
+        font-size: 50px;
+        top: 50%;
+        white-space: nowrap;
+    }
+	.score{
+		font-size: 8vh;
+	}
+	.wizard{
+		width: 120px;
+		height: 90px;
+	}
+	.pipe_sprite{
+		width: 14vw;
+	}
+}
